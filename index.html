@@ -21,7 +21,7 @@
                     <fieldset class="contenu-format format">
                         <legend class="format__legende">Format de la brochure</legend>
 
-                        <ul class="format__liste format__containeur">
+                        <ul class="format__liste format__containeur containeur">
 
                             <li class="format__liste__item">
                                 <input name="format" id="imprime" type="radio" value="imprime">
@@ -50,26 +50,26 @@
                     <fieldset class="contenu-contact contact">
                         <legend class="contact__legende">Informations de Contact</legend>
 
-                        <div class="contact__containeur">
+                        <div class="contact__containeur containeur">
 
-                            <p>
+                            <p class="containeur__item">
                                 <label for="prenom">Prénom</label>
                                 <input name="prenom" id="prenom" type="text">
                             </p>
                             
-                            <p>
+                            <p class="containeur__item">
                                 <label for="nom">Nom</label>
                                 <input name="nom" id="nom" type="text">
                             </p>
                             
-                            <p>
+                            <p class="containeur__item">
                                 <label for="email">
                                     Courriel <span class="info__exemple">(exemple@domaine.com)</span>
                                 </label>
                                 <input name="email" id="email" type="email">
                             </p>
                             
-                            <p>
+                            <p class="containeur__item">
                                 <label for="telephone">
                                     Téléphone <span class="info__exemple">(514 555 0123)</span>
                                 </label>
@@ -83,16 +83,16 @@
                     <fieldset class="contenu-postales postales">
                         <legend class="postales__legende">Informations Postales</legend>
 
-                        <div class="postales__containeur">
+                        <div class="postales__containeur containeur">
 
-                            <p>
+                            <p class="containeur__item">
                                 <label for="adresse">
                                     Adresse <span class="info__exemple">(123, rue Principale)</span>
                                 </label>
                                 <input name="adresse" id="adresse" type="text">
                             </p>
                                 
-                            <p>
+                            <p class="containeur__item">
                                 <label for="pays">Pays</label>
                                 <select name="pays" id="pays">
                                     <option value="selectionner">- Sélectionner -</option>
@@ -102,7 +102,7 @@
                                 </select>
                             </p>
 
-                            <p>
+                            <p class="containeur__item">
                                 <label for="province_etat">Province ou État</label>
                                 <select name="province_etat" id="province_etat">
                                     <optgroup label="Canada">
@@ -118,7 +118,7 @@
                                 </select>
                             </p>
                             
-                            <p>
+                            <p class="containeur__item">
                                 <label for="codePostal">
                                     Code Postal <span class="info__exemple">(A1A 1A1)</span>
                                 </label>
@@ -128,6 +128,13 @@
                         </div>
 
                     </fieldset>
+
+                    <p class="containeur__item">
+                        <input type="checkbox">
+                        <label for="">Je désire recevoir des informations mensuelles par courriel
+                             sur les nouvelles publications et ressources disponibles
+                            </label>
+                    </p>
                 </div>
             </form>
         </main>
