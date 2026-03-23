@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <script defer src="js/main.js"></script>
         <title>Commander une brochure gratuite</title>
@@ -11,149 +10,155 @@
     <body>
         <main class="main">
 
-            <a href="formulaire" class="screen-reader-only focusable">Accéder au formulaire</a>
-            <p class="main__texte">Publication Gratuite</p>
-            <p class="main__texte">Commander une <span class="italic">brochure</span> gratuite</p>
+            <img src="images/gradient.jpg" alt="" class="background-gradient">
 
-            <form action="index.html" class="formulaire" method="post" id="formulaire">
+            <div class="main__containeur">
+                <div class="main__texte commander">
+                    <a href="formulaire" class="screen-reader-only focusable">Accéder au formulaire</a>
+                    <p class="commander__texte small-caps">publication gratuite</p>
+                    <h1 class="commander__titre">Commander une <span class="italic couleur-primaire">brochure</span> gratuite</h1>
+                </div>
 
-                <div class="formulaire__containeur contenu">
+                <form action="index.html" class="formulaire" method="post" id="formulaire">
 
-                    <fieldset class="contenu-format format">
-                        <legend class="format__legende">Format de la brochure</legend>
+                    <div class="formulaire__containeur contenu">
 
-                        <ul class="format__liste format__containeur containeur">
+                        <fieldset class="contenu-format format">
+                            <legend class="format__legende">Format de la brochure</legend>
 
-                            <li class="format__liste__item">
-                                <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only">
-                                <label for="imprime">
-                                    <img src="images/icon-file-print.svg" alt="Format Imprimé">
-                                </label>
-                            </li>
+                            <ul class="format__liste format__containeur containeur">
 
-                            <li class="format__liste__item">
-                                <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only">
-                                <label for="pdf">
-                                    <img src="images/icon-file-pdf.svg" alt="Format PDF">
-                                </label>
-                            </li>
+                                <li class="format__liste__item">
+                                    <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only">
+                                    <label for="imprime">
+                                        <img src="images/icon-file-print.svg" alt="Format Imprimé">
+                                    </label>
+                                </li>
 
-                            <li class="format__liste__item">
-                                 <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only">
-                                <label for="epub">
-                                    <img src="images/icon-file-epub.svg" alt="Format ePub">
-                                </label>
-                            </li>
+                                <li class="format__liste__item">
+                                    <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only">
+                                    <label for="pdf">
+                                        <img src="images/icon-file-pdf.svg" alt="Format PDF">
+                                    </label>
+                                </li>
 
-                        </ul>
-                    </fieldset>
+                                <li class="format__liste__item">
+                                    <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only">
+                                    <label for="epub">
+                                        <img src="images/icon-file-epub.svg" alt="Format ePub">
+                                    </label>
+                                </li>
 
-                    <fieldset class="contenu-contact contact">
-                        <legend class="contact__legende">Informations de Contact</legend>
+                            </ul>
+                        </fieldset>
 
-                        <div class="contact__containeur containeur">
+                        <fieldset class="contenu-contact contact">
+                            <legend class="contact__legende">Informations de Contact</legend>
 
-                            <div class="nom-prenom__containeur table--flex--row">
+                            <div class="contact__containeur containeur">
+
+                                <div class="nom-prenom__containeur table--flex--row">
+                                    <p class="containeur__item">
+                                        <label for="prenom">Prénom</label>
+                                        <input name="prenom" id="prenom" type="text">
+                                    </p>
+                                    
+                                    <p class="containeur__item">
+                                        <label for="nom">Nom</label>
+                                        <input name="nom" id="nom" type="text">
+                                    </p>
+                                </div>
+                                
                                 <p class="containeur__item">
-                                    <label for="prenom">Prénom</label>
-                                    <input name="prenom" id="prenom" type="text">
+                                    <label for="email">
+                                        Courriel <span class="info__exemple">(exemple@domaine.com)</span>
+                                    </label>
+                                    <input name="email" id="email" type="email">
                                 </p>
                                 
                                 <p class="containeur__item">
-                                    <label for="nom">Nom</label>
-                                    <input name="nom" id="nom" type="text">
+                                    <label for="telephone">
+                                        Téléphone <span class="info__exemple">(514 555 0123)</span>
+                                    </label>
+                                    <input name="telephone" id="telephone" type="number">
                                 </p>
+                            
                             </div>
-                            
-                            <p class="containeur__item">
-                                <label for="email">
-                                    Courriel <span class="info__exemple">(exemple@domaine.com)</span>
-                                </label>
-                                <input name="email" id="email" type="email">
-                            </p>
-                            
-                            <p class="containeur__item">
-                                <label for="telephone">
-                                    Téléphone <span class="info__exemple">(514 555 0123)</span>
-                                </label>
-                                <input name="telephone" id="telephone" type="number">
-                            </p>
-                        
-                        </div>
 
-                    </fieldset>
+                        </fieldset>
 
-                    <fieldset class="contenu-postales postales">
-                        <legend class="postales__legende">Informations Postales</legend>
+                        <fieldset class="contenu-postales postales">
+                            <legend class="postales__legende">Informations Postales</legend>
 
-                        <div class="postales__containeur containeur">
+                            <div class="postales__containeur containeur">
 
-                            <p class="containeur__item">
-                                <label for="adresse">
-                                    Adresse <span class="info__exemple">(123, rue Principale)</span>
-                                </label>
-                                <input name="adresse" id="adresse" type="text">
-                            </p>
-                            
-                            <div class="localisation__containeur table--flex--row">
                                 <p class="containeur__item">
-                                    <label for="pays">Pays</label>
-                                    <select name="pays" id="pays">
-                                        <option value="selectionner">- Sélectionner -</option>
-                                        <option value="canada">Canada</option>
-                                        <option value="usa">États-Unis</option>
-                                        <option value="espagne">Espagne</option>
-                                    </select>
+                                    <label for="adresse">
+                                        Adresse <span class="info__exemple">(123, rue Principale)</span>
+                                    </label>
+                                    <input name="adresse" id="adresse" type="text">
                                 </p>
-
-                                <p class="containeur__item">
-                                    <label for="province_etat">Province ou État</label>
-                                    <select name="province_etat" id="province_etat">
-                                        <optgroup label="Aucun">
+                                
+                                <div class="localisation__containeur table--flex--row">
+                                    <p class="containeur__item">
+                                        <label for="pays">Pays</label>
+                                        <select name="pays" id="pays">
                                             <option value="selectionner">- Sélectionner -</option>
-                                        </optgroup>
-                                        <optgroup label="Canada">
-                                            <option value="QC">Québec</option>
-                                            <option value="ON">Ontario</option>
-                                            <option value="BC">British Columbia</option>
-                                            <option value="AB">Alberta</option>
-                                        </optgroup>
-                                        <optgroup label="États-Unis">
-                                            <option value="CA">Californie</option>
-                                            <option value="NY">New York</option>
-                                        </optgroup>
-                                    </select>
+                                            <option value="canada">Canada</option>
+                                            <option value="usa">États-Unis</option>
+                                            <option value="espagne">Espagne</option>
+                                        </select>
+                                    </p>
+
+                                    <p class="containeur__item">
+                                        <label for="province_etat">Province ou État</label>
+                                        <select name="province_etat" id="province_etat">
+                                            <optgroup label="Aucun">
+                                                <option value="selectionner">- Sélectionner -</option>
+                                            </optgroup>
+                                            <optgroup label="Canada">
+                                                <option value="QC">Québec</option>
+                                                <option value="ON">Ontario</option>
+                                                <option value="BC">British Columbia</option>
+                                                <option value="AB">Alberta</option>
+                                            </optgroup>
+                                            <optgroup label="États-Unis">
+                                                <option value="CA">Californie</option>
+                                                <option value="NY">New York</option>
+                                            </optgroup>
+                                        </select>
+                                    </p>
+                                </div>
+                                
+                                <p class="containeur__item">
+                                    <label for="codePostal">
+                                        Code Postal <span class="info__exemple">(A1A 1A1)</span>
+                                    </label>
+                                    <input name="codePostal" id="codePostal" type="text" max="7">
                                 </p>
-                            </div>
                             
-                            <p class="containeur__item">
-                                <label for="codePostal">
-                                    Code Postal <span class="info__exemple">(A1A 1A1)</span>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="footer__containeur containeur">
+
+                            <p class="containeur__item infolettre">
+                                <input type="checkbox" name="infolettre" id="infolettre">
+                                <label for="infolettre">
+                                    Je désire recevoir des informations mensuelles par courriel
+                                    sur les nouvelles publications et ressources disponibles
                                 </label>
-                                <input name="codePostal" id="codePostal" type="text" max="7">
                             </p>
-                        
+
+                            <p class="containeur__item bouton-commander">
+                                <input type="button" name="commander" id="commander" value="Commander">
+                            </p>
+
                         </div>
-
-                    </fieldset>
-
-                    <div class="footer__containeur containeur">
-
-                        <p class="containeur__item infolettre">
-                            <input type="checkbox" name="infolettre" id="infolettre">
-                            <label for="infolettre">
-                                Je désire recevoir des informations mensuelles par courriel
-                                sur les nouvelles publications et ressources disponibles
-                            </label>
-                        </p>
-
-                        <p class="containeur__item bouton-commander">
-                            <input type="button" name="commander" id="commander" value="Commander">
-                        </p>
-
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </main>
     </body>
 </html>

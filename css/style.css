@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /**
- * @author X <X@csfoy.ca>
+ * @author X <2435415@csfoy.ca>
  *
  * TABLE DES MATIERES
  *
@@ -16,7 +16,7 @@
  * Styles de base
  * Accessibilité
  * Validations
- *
+ * Mise en page
  */
 
 /* ------- Reset ------- */
@@ -26,15 +26,23 @@
 /* ------- Variables ------- */
 :root {
     /* Couleurs */
-    --couleur-primaire: ?;
-    --couleur-secondaire: ?;
-    --couleur-tertiaire: ?;
+    --couleur-primaire: #50C0F7;
+    --couleur-secondaire: #2B769A;
+    --couleur-tertiaire: #fcfcfa;
+    font-size: 16px;
 }
 
 /* ------- Styles de base ------- */
 /* Harmoniser le modèle de boîte avec Box-Sizing */
 html {
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', 'Playfair', sans-serif, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 *,
@@ -102,6 +110,53 @@ img {
     background-position: 99px 0;
 }
 
+/* ------Mise en page------ */
+/* Mobile First */
+
+
+/* Main (avant formulaire) */
+.main {
+    position: relative;
+    z-index: 98;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    background-color: var(--couleur-tertiaire);
+}
+
+.background-gradient {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 25%;
+    vertical-align: bottom;
+}
+
+.main__containeur {
+    position: inherit;
+    z-index: 101;
+    padding-inline: 2rem;
+}
+
+.commander {
+    padding-top: 8rem;
+}
+
+.commander__texte {
+    color: rgb(198, 198, 198);
+}
+
+.commander__titre {
+    color: white;
+}
+
+/* Formulaire */
+.formulaire {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -111,7 +166,7 @@ ul {
 
 label {
     display: inline-block;
-    background-color: blue;
+    background-color: var(--couleur-tertiaire);
     color: white;
     border-radius: 1rem;
     padding: 0.55rem;
@@ -119,6 +174,36 @@ label {
 }
 
 input[type=radio]:checked + label {
-    outline: 2px solid blue;
+    outline: 2px solid var(--couleur-primaire);
     outline-offset: 2px;
+}
+
+/* Autre (modificateurs) */
+.italic {
+    font-style: italic;
+}
+
+.couleur-primaire {
+    color: var(--couleur-primaire);
+}
+
+.couleur-secondaire {
+    color: var(--couleur-secondaire);
+}
+
+.couleur-tertiaire {
+    color: var(--couleur-tertiaire);
+}
+
+.small-caps {
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+/* Affichage Écran large */
+@media (min-width: 64rem) {
+
+    .main {
+        max-width: 62.5rem;
+    }
 }
