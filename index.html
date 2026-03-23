@@ -11,10 +11,11 @@
     <body>
         <main class="main">
 
+            <a href="formulaire" class="screen-reader-only focusable">Accéder au formulaire</a>
             <p class="main__texte">Publication Gratuite</p>
             <p class="main__texte">Commander une <span class="italic">brochure</span> gratuite</p>
 
-            <form action="index.html" class="formulaire" method="post">
+            <form action="index.html" class="formulaire" method="post" id="formulaire">
 
                 <div class="formulaire__containeur contenu">
 
@@ -24,21 +25,21 @@
                         <ul class="format__liste format__containeur containeur">
 
                             <li class="format__liste__item">
-                                <input name="format" id="imprime" type="radio" value="imprime">
+                                <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only">
                                 <label for="imprime">
                                     <img src="images/icon-file-print.svg" alt="Format Imprimé">
                                 </label>
                             </li>
 
                             <li class="format__liste__item">
-                                <input name="format" id="pdf" type="radio" value="pdf">
+                                <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only">
                                 <label for="pdf">
                                     <img src="images/icon-file-pdf.svg" alt="Format PDF">
                                 </label>
                             </li>
 
                             <li class="format__liste__item">
-                                 <input name="format" id="epub" type="radio" value="epub">
+                                 <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only">
                                 <label for="epub">
                                     <img src="images/icon-file-epub.svg" alt="Format ePub">
                                 </label>
@@ -52,15 +53,17 @@
 
                         <div class="contact__containeur containeur">
 
-                            <p class="containeur__item">
-                                <label for="prenom">Prénom</label>
-                                <input name="prenom" id="prenom" type="text">
-                            </p>
-                            
-                            <p class="containeur__item">
-                                <label for="nom">Nom</label>
-                                <input name="nom" id="nom" type="text">
-                            </p>
+                            <div class="nom-prenom__containeur table--flex--row">
+                                <p class="containeur__item">
+                                    <label for="prenom">Prénom</label>
+                                    <input name="prenom" id="prenom" type="text">
+                                </p>
+                                
+                                <p class="containeur__item">
+                                    <label for="nom">Nom</label>
+                                    <input name="nom" id="nom" type="text">
+                                </p>
+                            </div>
                             
                             <p class="containeur__item">
                                 <label for="email">
@@ -91,32 +94,37 @@
                                 </label>
                                 <input name="adresse" id="adresse" type="text">
                             </p>
-                                
-                            <p class="containeur__item">
-                                <label for="pays">Pays</label>
-                                <select name="pays" id="pays">
-                                    <option value="selectionner">- Sélectionner -</option>
-                                    <option value="canada">Canada</option>
-                                    <option value="usa">États-Unis</option>
-                                    <option value="espagne">Espagne</option>
-                                </select>
-                            </p>
+                            
+                            <div class="localisation__containeur table--flex--row">
+                                <p class="containeur__item">
+                                    <label for="pays">Pays</label>
+                                    <select name="pays" id="pays">
+                                        <option value="selectionner">- Sélectionner -</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">États-Unis</option>
+                                        <option value="espagne">Espagne</option>
+                                    </select>
+                                </p>
 
-                            <p class="containeur__item">
-                                <label for="province_etat">Province ou État</label>
-                                <select name="province_etat" id="province_etat">
-                                    <optgroup label="Canada">
-                                        <option value="QC">Québec</option>
-                                        <option value="ON">Ontario</option>
-                                        <option value="BC">British Columbia</option>
-                                        <option value="AB">Alberta</option>
-                                    </optgroup>
-                                    <optgroup label="États-Unis">
-                                        <option value="CA">Californie</option>
-                                        <option value="NY">New York</option>
-                                    </optgroup>
-                                </select>
-                            </p>
+                                <p class="containeur__item">
+                                    <label for="province_etat">Province ou État</label>
+                                    <select name="province_etat" id="province_etat">
+                                        <optgroup label="Aucun">
+                                            <option value="selectionner">- Sélectionner -</option>
+                                        </optgroup>
+                                        <optgroup label="Canada">
+                                            <option value="QC">Québec</option>
+                                            <option value="ON">Ontario</option>
+                                            <option value="BC">British Columbia</option>
+                                            <option value="AB">Alberta</option>
+                                        </optgroup>
+                                        <optgroup label="États-Unis">
+                                            <option value="CA">Californie</option>
+                                            <option value="NY">New York</option>
+                                        </optgroup>
+                                    </select>
+                                </p>
+                            </div>
                             
                             <p class="containeur__item">
                                 <label for="codePostal">

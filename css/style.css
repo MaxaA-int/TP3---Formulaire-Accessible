@@ -101,3 +101,24 @@ img {
 .icone--erreur {
     background-position: 99px 0;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+label {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+
+input[type=radio]:checked + label {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
