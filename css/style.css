@@ -28,7 +28,7 @@
     /* Couleurs */
     --couleur-primaire: #50C0F7;
     --couleur-secondaire: #2B769A;
-    --couleur-tertiaire: #fcfcfa;
+    --couleur-tertiaire: #f7f5f0;
     font-size: 16px;
 }
 
@@ -156,27 +156,56 @@ img {
     padding: 1rem;
 }
 
+.containeur {
+    text-transform: initial;
+    font-variant: normal;
+}
 
-ul {
+.contenu-format,
+.contenu-contact,
+.contenu-postales {
+    border: none;
+    margin-top: 1rem;
+}
+
+.legende {
+    border-bottom: 2px solid #ded9d1;
+    width: 100%;
+    padding: 1rem;
+}
+
+.format__containeur {
     list-style-type: none;
     padding: 0;
     display: flex;
     gap: 1rem;
+    flex-direction: column;
 }
 
-label {
+.contenu-format label {
     display: inline-block;
     background-color: var(--couleur-tertiaire);
     color: white;
     border-radius: 1rem;
-    padding: 0.55rem;
+    padding: 1.5rem;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #ded9d1;
+}
+
+.contenu-format label p {
+    color: black;
+    margin: 0;
+    font-weight: 500;
 }
 
 input[type=radio]:checked + label {
     outline: 2px solid var(--couleur-primaire);
     outline-offset: 2px;
 }
+
+
 
 /* Autre (modificateurs) */
 .italic {
