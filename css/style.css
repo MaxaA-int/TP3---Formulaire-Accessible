@@ -263,14 +263,22 @@ select {
     justify-content: right;
 }
 
-.bouton-commander input {
+.bouton-commander button {
     background-color: var(--couleur-secondaire);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     border: none;
     color: #f7f5f0;
     margin: 2rem 0;
-    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bouton-commander button img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Autre (modificateurs) */
