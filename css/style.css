@@ -161,11 +161,11 @@ img {
     font-variant: normal;
 }
 
-.contenu-format,
-.contenu-contact,
-.contenu-postales {
+fieldset {
     border: none;
     margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .legende {
@@ -185,7 +185,6 @@ img {
 .contenu-format label {
     display: inline-block;
     background-color: var(--couleur-tertiaire);
-    color: white;
     border-radius: 1rem;
     padding: 1.5rem;
     cursor: pointer;
@@ -205,6 +204,44 @@ input[type=radio]:checked + label {
     outline-offset: 2px;
 }
 
+.containeur {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.containeur__item label {
+    display: block;
+}
+
+.containeur__item input,
+select {
+    display: inline-block;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: 2px solid #ded9d1;
+    margin-top: 0.5rem;
+}
+
+.footer__containeur {
+    background-color: #ded9d1;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.infolettre {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__containeur input {
+    width: auto;
+    margin: 0 1rem 0 0;
+    border-color: #ded9d1;
+}
 
 
 /* Autre (modificateurs) */
@@ -227,6 +264,10 @@ input[type=radio]:checked + label {
 .small-caps {
     text-transform: lowercase;
     font-variant: small-caps;
+}
+
+.info__exemple {
+    color: rgb(149, 149, 149);
 }
 
 /* Affichage Écran large */
