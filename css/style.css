@@ -168,8 +168,21 @@ fieldset {
     font-size: 1.5rem;
 }
 
-.legende {
+.repere {
+    display: flex;
+    align-items: center;
     border-bottom: 2px solid #ded9d1;
+}
+
+.icone {
+    background-color: var(--couleur-secondaire);
+    width: 45px;
+    height: 45px;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.legende {
     width: 100%;
     padding: 1rem;
 }
@@ -221,6 +234,7 @@ select {
     border-radius: 1rem;
     border: 2px solid #ded9d1;
     margin-top: 0.5rem;
+    background-color: var(--couleur-tertiaire);
 }
 
 .footer__containeur {
@@ -250,7 +264,7 @@ select {
 }
 
 .bouton-commander input {
-    background-color: var(--couleur-primaire);
+    background-color: var(--couleur-secondaire);
     padding: 1rem;
     border-radius: 1rem;
     border: none;
@@ -258,7 +272,6 @@ select {
     margin: 2rem 0;
     width: 20%;
 }
-
 
 /* Autre (modificateurs) */
 .italic {
