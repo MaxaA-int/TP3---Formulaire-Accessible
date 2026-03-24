@@ -243,6 +243,22 @@ select {
     border-color: #ded9d1;
 }
 
+.bouton-commander {
+    margin: 1rem;
+    display: flex;
+    justify-content: right;
+}
+
+.bouton-commander input {
+    background-color: var(--couleur-primaire);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    color: #f7f5f0;
+    margin: 2rem 0;
+    width: 20%;
+}
+
 
 /* Autre (modificateurs) */
 .italic {
