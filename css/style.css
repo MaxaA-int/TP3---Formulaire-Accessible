@@ -159,6 +159,10 @@ img {
 .containeur {
     text-transform: initial;
     font-variant: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
 }
 
 fieldset {
@@ -187,14 +191,6 @@ fieldset {
     padding: 1rem;
 }
 
-.format__containeur {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-}
-
 .contenu-format label {
     display: inline-block;
     background-color: var(--couleur-tertiaire);
@@ -212,18 +208,28 @@ fieldset {
     font-weight: 500;
 }
 
+.format__liste {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
 input[type=radio]:checked + label {
     outline: 2px solid var(--couleur-primaire);
     outline-offset: 2px;
 }
 
-.containeur {
-    font-size: 1rem;
-    font-weight: 400;
+.nom-prenom__containeur,
+.localisation__containeur,
+.contact__containeur {
+    display: flex;
+    flex-direction: column;
 }
 
 .containeur__item label {
-    display: block;
+    display: inline-block;
 }
 
 .containeur__item input,
@@ -312,5 +318,24 @@ select {
 
     .main {
         max-width: 62.5rem;
+    }
+
+    .format__liste {
+        flex-direction: row;
+        flex: 1 1 calc(33% - 2rem);
+        gap: 1rem;
+    }
+
+    .nom-prenom__containeur,
+    .localisation__containeur {
+        flex-direction: row;
+        flex: 1 1 calc(50% - 2rem);
+        gap: 1rem;
+    }
+
+    .nom-prenom__containeur p,
+    .localisation__containeur p,
+    .format__liste__item {
+        width: 100%;
     }
 }
