@@ -14,7 +14,7 @@
 
             <div class="main__containeur">
                 <div class="main__texte commander">
-                    <a href="formulaire" class="screen-reader-only focusable">Accéder au formulaire</a>
+                    <a href="#formulaire" class="screen-reader-only focusable">Accéder au formulaire</a>
                     <p class="commander__texte small-caps">publication gratuite</p>
                     <h1 class="commander__titre">Commander une <span class="italic couleur-primaire">brochure</span> gratuite</h1>
                 </div>
@@ -36,10 +36,10 @@
 
                             <div class="format__containeur containeur">
 
-                                <ul class="format__liste">
+                                <ul class="format__liste table--flex--row">
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only">
+                                        <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only" required>
                                         <label for="imprime">
                                             <img src="images/icon-file-print.svg" alt="Format Imprimé">
                                             <p class="imprime__texte">Imprimé</p>
@@ -47,7 +47,7 @@
                                     </li>
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only">
+                                        <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only" required>
                                         <label for="pdf">
                                             <img src="images/icon-file-pdf.svg" alt="Format PDF">
                                             <p class="pdf__texte">PDF</p>
@@ -55,7 +55,7 @@
                                     </li>
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only">
+                                        <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only" required>
                                         <label for="epub">
                                             <img src="images/icon-file-epub.svg" alt="Format ePub">
                                             <p class="epub__texte">ePub</p>
@@ -83,12 +83,12 @@
                                 <div class="nom-prenom__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="prenom">Prénom</label>
-                                        <input name="prenom" id="prenom" type="text">
+                                        <input name="prenom" id="prenom" type="text" required pattern="[a-zA-Z0-9]+">
                                     </p>
                                     
                                     <p class="containeur__item">
                                         <label for="nom">Nom</label>
-                                        <input name="nom" id="nom" type="text">
+                                        <input name="nom" id="nom" type="text" required pattern="[a-zA-Z0-9]+">
                                     </p>
                                 </div>
                                 
@@ -96,14 +96,14 @@
                                     <label for="email">
                                         Courriel <span class="info__exemple">(exemple@domaine.com)</span>
                                     </label>
-                                    <input name="email" id="email" type="email">
+                                    <input name="email" id="email" type="email" required>
                                 </p>
                                 
                                 <p class="containeur__item">
                                     <label for="telephone">
                                         Téléphone <span class="info__exemple">(514 555 0123)</span>
                                     </label>
-                                    <input name="telephone" id="telephone" type="number">
+                                    <input name="telephone" id="telephone" type="number" required>
                                 </p>
                             
                             </div>
@@ -127,13 +127,13 @@
                                     <label for="adresse">
                                         Adresse <span class="info__exemple">(123, rue Principale)</span>
                                     </label>
-                                    <input name="adresse" id="adresse" type="text">
+                                    <input name="adresse" id="adresse" type="text" required pattern="\d+,\s[A-Za-zÀ-ÿ]+(\s[A-Za-zÀ-ÿ]+)*">
                                 </p>
                                 
                                 <div class="localisation__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="pays">Pays</label>
-                                        <select name="pays" id="pays">
+                                        <select name="pays" id="pays" required>
                                             <option value="selectionner">- Sélectionner -</option>
                                             <option value="canada">Canada</option>
                                             <option value="usa">États-Unis</option>
@@ -143,7 +143,7 @@
 
                                     <p class="containeur__item">
                                         <label for="province_etat">Province ou État</label>
-                                        <select name="province_etat" id="province_etat">
+                                        <select name="province_etat" id="province_etat" required>
                                             <optgroup label="Aucun">
                                                 <option value="selectionner">- Sélectionner -</option>
                                             </optgroup>
@@ -165,7 +165,7 @@
                                     <label for="codePostal">
                                         Code Postal <span class="info__exemple">(A1A 1A1)</span>
                                     </label>
-                                    <input name="codePostal" id="codePostal" type="text" max="7">
+                                    <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s\d[A-Za-z]\d">
                                 </p>
                             
                             </div>

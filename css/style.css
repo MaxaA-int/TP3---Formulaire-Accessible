@@ -313,6 +313,16 @@ select {
     color: rgb(149, 149, 149);
 }
 
+:focus-visible {
+    outline: 3px solid var(--couleur-secondaire);
+    outline-offset: 3px;
+    border-radius: 1rem;
+}
+
+a {
+    color: var(--couleur-primaire);
+}
+
 /* Affichage Écran large */
 @media (min-width: 64rem) {
 
@@ -321,14 +331,12 @@ select {
     }
 
     .format__liste {
-        flex-direction: row;
         flex: 1 1 calc(33% - 2rem);
         gap: 1rem;
     }
 
     .nom-prenom__containeur,
     .localisation__containeur {
-        flex-direction: row;
         flex: 1 1 calc(50% - 2rem);
         gap: 1rem;
     }
@@ -337,5 +345,9 @@ select {
     .localisation__containeur p,
     .format__liste__item {
         width: 100%;
+    }
+
+    .table--flex--row {
+        flex-direction: row;
     }
 }
