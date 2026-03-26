@@ -149,7 +149,7 @@ img {
     color: white;
 }
 
-/* Formulaire */
+/* Formulaire - Éléments généraux */
 .formulaire {
     background-color: white;
     border-radius: 1rem;
@@ -191,6 +191,7 @@ fieldset {
     padding: 1rem;
 }
 
+/* Formulaire - Éléments du formulaire */
 .contenu-format label {
     display: inline-block;
     background-color: var(--couleur-tertiaire);
@@ -214,6 +215,12 @@ fieldset {
     display: flex;
     gap: 1rem;
     flex-direction: column;
+}
+
+input[type=radio]:focus + label {
+    outline: 3px solid var(--couleur-secondaire);
+    outline-offset: 3px;
+    border-radius: 1rem;
 }
 
 input[type=radio]:checked + label {
@@ -243,6 +250,7 @@ select {
     background-color: var(--couleur-tertiaire);
 }
 
+/* Formulaire - Bas de page */
 .footer__containeur {
     background-color: #ded9d1;
     padding: 1rem;
