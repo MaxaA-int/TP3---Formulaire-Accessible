@@ -25,7 +25,11 @@
 
 /* ------- Variables ------- */
 :root {
-    /* Couleurs */
+    /* Couleurs
+    Ratio de Contraste (avec couleur secondaire) : 5 
+    Contraste (minimum) :  A
+    Conforme (texte normal) : AA (Grand format) : AAA
+     */
     --couleur-primaire: #50C0F7;
     --couleur-secondaire: #2B769A;
     --couleur-tertiaire: #f7f5f0;
@@ -259,7 +263,7 @@ select {
     margin: 1rem;
 }
 
-.infolettre {
+.containeur__item.infolettre {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
