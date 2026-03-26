@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 /**
- * @author X <2435415@csfoy.ca>
+ * @author Maxime Riverin <2435415@csfoy.ca>
  *
  * TABLE DES MATIERES
  *
@@ -248,6 +248,7 @@ select {
     border: 2px solid #ded9d1;
     margin-top: 0.5rem;
     background-color: var(--couleur-tertiaire);
+    margin-bottom: 1rem;
 }
 
 /* Formulaire - Bas de page */
@@ -295,6 +296,20 @@ select {
     height: 20px;
 }
 
+/* Message Erreur */
+.cacher {
+    display: none;
+}
+
+.message-erreur {
+    color: red;
+    outline: 2px solid rgb(171, 44, 30);
+    outline-offset: 3px;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    width: fit-content;
+}
+
 /* Autre (modificateurs) */
 .italic {
     font-style: italic;
@@ -336,6 +351,16 @@ a {
 
     .main {
         max-width: 62.5rem;
+    }
+
+    .containeur__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .containeur__item input,
+    select {
+        margin-bottom: 0rem;
     }
 
     .format__liste {

@@ -64,6 +64,8 @@
 
                                 </ul>
 
+                                <span class="message-erreur erreur-format cacher" role="alert">Veuillez choisir un type de format</span>
+
                             </div>
                         </fieldset>
 
@@ -84,11 +86,13 @@
                                     <p class="containeur__item">
                                         <label for="prenom">Prénom</label>
                                         <input name="prenom" id="prenom" type="text" required pattern="[a-zA-Z0-9]+">
+                                        <span class="message-erreur erreur-prenom cacher" role="alert">Veuillez écrire un prénom valide</span>
                                     </p>
                                     
                                     <p class="containeur__item">
                                         <label for="nom">Nom</label>
                                         <input name="nom" id="nom" type="text" required pattern="[a-zA-Z0-9]+">
+                                        <span class="message-erreur erreur-nom cacher" role="alert">Veuillez écrire un nom valide</span>
                                     </p>
                                 </div>
                                 
@@ -97,6 +101,7 @@
                                         Courriel <span class="info__exemple">(exemple@domaine.com)</span>
                                     </label>
                                     <input name="email" id="email" type="email" required>
+                                    <span class="message-erreur erreur-email cacher" role="alert">Veuillez écrire un email valide</span>
                                 </p>
                                 
                                 <p class="containeur__item">
@@ -104,6 +109,7 @@
                                         Téléphone <span class="info__exemple">(exemple : 514 555 0123)</span>
                                     </label>
                                     <input name="telephone" id="telephone" type="number" required>
+                                    <span class="message-erreur erreur-tel cacher" role="alert">Veuillez écrire un numéro de téléphone valide</span>
                                 </p>
                             
                             </div>
@@ -128,14 +134,14 @@
                                         Adresse <span class="info__exemple">(exemple : 123, rue Principale)</span>
                                     </label>
                                     <input name="adresse" id="adresse" type="text" required pattern="\d+,\s[A-Za-zÀ-ÿ]+(\s[A-Za-zÀ-ÿ]+)*">
+                                    <span class="message-erreur erreur-adresse cacher" role="alert">Veuillez écrire une adresse valide</span>
                                 </p>
                                 
                                 <div class="localisation__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="pays">Pays</label>
                                         <select name="pays" id="pays" required>
-                                            <option value="selectionner">- Sélectionner -</option>
-                                            <option value="canada">Canada</option>
+                                            <option value="canada" selected>Canada</option>
                                             <option value="usa">États-Unis</option>
                                             <option value="espagne">Espagne</option>
                                         </select>
@@ -144,12 +150,9 @@
                                     <p class="containeur__item">
                                         <label for="province_etat">Province ou État</label>
                                         <select name="province_etat" id="province_etat" required>
-                                            <optgroup label="Aucun">
-                                                <option value="selectionner">- Sélectionner -</option>
-                                            </optgroup>
                                             <optgroup label="Canada">
                                                 <option value="QC">Québec</option>
-                                                <option value="ON">Ontario</option>
+                                                <option value="ON" selected>Ontario</option>
                                                 <option value="BC">British Columbia</option>
                                                 <option value="AB">Alberta</option>
                                             </optgroup>
@@ -166,6 +169,7 @@
                                         Code Postal <span class="info__exemple">(exemple : A1A 1A1)</span>
                                     </label>
                                     <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s\d[A-Za-z]\d">
+                                    <span class="message-erreur erreur-postal cacher" role="alert">Veuillez écrire un code postal valide</span>
                                 </p>
                             
                             </div>
@@ -178,7 +182,7 @@
                                 <input type="checkbox" name="infolettre" id="infolettre">
                                 <label for="infolettre">
                                     Je désire recevoir des informations mensuelles par courriel
-                                    sur les nouvelles publications et ressources disponibles
+                                    sur les nouvelles publications et ressources disponibles. (facultatif)
                                 </label>
                             </p>
 
