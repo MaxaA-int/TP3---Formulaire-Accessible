@@ -64,7 +64,7 @@ Exemple pour le cas d'un seul élément :
 - [ ] Vérifier que les champs de saisie ne sont pas vides ; afficher un message d'erreur
 - [ ] Vérifier que les données sont conformes au type attendu ; afficher un message d'erreur
 
-#### Ma note d'autoévaluation pour le critère JavaScript : Z
+#### Ma note d'autoévaluation pour le critère JavaScript : pas encore déterminé...
 
 ---
 
@@ -74,5 +74,7 @@ Exemple pour le cas d'un seul élément :
 ---
 
 ## Ajoutez vos commentaires sur le projet. Comment ça s'est passé? Quels aspects avez-vous trouvé facile ou difficile?
+
+Le projet n'était pas nécessairement difficle à réaliser, mais juste très stricte sur les règles de l'accessibilité. J'ai pu apprendre à créer un bon formulaire et à expérimenter plusieurs balises que j'avais très peu utilisé auparavant (input, select, option..)
 
 ## Ma note d'autoévaluation pour le projet entier : A

@@ -85,13 +85,13 @@
                                 <div class="nom-prenom__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="prenom">Prénom</label>
-                                        <input name="prenom" id="prenom" type="text" required pattern="[a-zA-Z0-9]+" title="Champ pour le prénom">
+                                        <input name="prenom" id="prenom" type="text" required pattern="[A-Za-zÀ-ÿ]+([- ][A-Za-zÀ-ÿ]+)*" title="Champ pour le prénom">
                                         <span class="message-erreur erreur-prenom cacher" role="alert">Veuillez écrire un prénom valide</span>
                                     </p>
                                     
                                     <p class="containeur__item">
                                         <label for="nom">Nom</label>
-                                        <input name="nom" id="nom" type="text" required pattern="[a-zA-Z0-9]+" title="Champ pour le nom">
+                                        <input name="nom" id="nom" type="text" required pattern="[A-Za-zÀ-ÿ]+([- ][A-Za-zÀ-ÿ]+)*" title="Champ pour le nom">
                                         <span class="message-erreur erreur-nom cacher" role="alert">Veuillez écrire un nom valide</span>
                                     </p>
                                 </div>
@@ -100,7 +100,7 @@
                                     <label for="email">
                                         Courriel <span class="info__exemple">(exemple@domaine.com)</span>
                                     </label>
-                                    <input name="email" id="email" type="email" required title="Champ pour l'adresse email">
+                                    <input name="email" id="email" type="email" required title="Champ pour l'adresse email" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+">
                                     <span class="message-erreur erreur-email cacher" role="alert">Veuillez écrire un email valide</span>
                                 </p>
                                 
@@ -108,8 +108,8 @@
                                     <label for="telephone">
                                         Téléphone <span class="info__exemple">(exemple : 514 555 0123)</span>
                                     </label>
-                                    <input name="telephone" id="telephone" type="number" required title="Champ pour le numéro de telephone">
-                                    <span class="message-erreur erreur-tel cacher" role="alert">Veuillez écrire un numéro de téléphone valide</span>
+                                    <input name="telephone" id="telephone" type="number" required title="Champ pour le numéro de telephone" pattern="(\d{3}[-\s]?\d{3}[-\s]?\d{4})+">
+                                    <span class="message-erreur erreur-telephone cacher" role="alert">Veuillez écrire un numéro de téléphone valide</span>
                                 </p>
                             
                             </div>
@@ -168,8 +168,8 @@
                                     <label for="codePostal">
                                         Code Postal <span class="info__exemple">(exemple : A1A 1A1)</span>
                                     </label>
-                                    <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s\d[A-Za-z]\d" title="Champ pour le code postal">
-                                    <span class="message-erreur erreur-postal cacher" role="alert">Veuillez écrire un code postal valide</span>
+                                    <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d" title="Champ pour le code postal">
+                                    <span class="message-erreur erreur-codePostal cacher" role="alert">Veuillez écrire un code postal valide</span>
                                 </p>
                             
                             </div>
