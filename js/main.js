@@ -7,12 +7,9 @@
 document.getElementById('formulaire').setAttribute('novalidate', true);
 document.getElementById('telephone').type = "text";
 document.getElementById('formulaire').addEventListener('submit', validerFormulaire);
-document.querySelectorAll('.contact__containeur input').forEach(item => {
-    item.addEventListener('blur', validerContact);
+document.querySelectorAll('.informations-personnelles__containeur input').forEach(item => {
+    item.addEventListener('blur', validerInformationsPersonnelles);
 });
-document.querySelectorAll('.postales__containeur input').forEach(item => {
-    item.addEventListener('blur', validerPostales);
-})
 
 function validerFormulaire(objEvent) {
     let intChampsInvalides = 0;
@@ -56,38 +53,19 @@ function validerFormat() {
     return blnEstValide;
 }
 
-function validerContact(objEvent) {
+function validerInformationsPersonnelles(objEvent) {
     let blnEstValide = true;
-    const refObjetContact = objEvent.target;
-    const refMessageErreurContact = document.querySelector(`.contact__containeur .erreur-${refObjetContact.id}`);
-    const strValeurObjet = refObjetContact.value.trim();
-    const regexObjet = new RegExp('^' + refObjetContact.pattern + '$');
+    const refObjet = objEvent.target;
+    const refMessageErreur = document.querySelector(`.informations-personnelles__containeur .erreur-${refObjet.id}`);
+    const strValeurObjet = refObjet.value.trim();
+    const regexObjet = new RegExp('^' + refObjet.pattern + '$');
     console.log(regexObjet);
 
     if ((strValeurObjet.length !== 0) && (regexObjet.test(strValeurObjet))) {
-        refMessageErreurContact.classList.add('cacher');
+        refMessageErreur.classList.add('cacher');
     }
     else {
-        refMessageErreurContact.classList.remove('cacher');
-        blnEstValide = false;
-    }
-
-    return blnEstValide;
-}
-
-function validerPostales(objEvent) {
-    let blnEstValide = true;
-    const refObjetPostales = objEvent.target;
-    const refMessageErreurPostales = document.querySelector(`.postales__containeur .erreur-${refObjetPostales.id}`);
-    const strValeurObjet = refObjetPostales.value.trim();
-    const regexObjet = new RegExp('^' + refObjetPostales.pattern + '$');
-    console.log(regexObjet);
-
-    if ((strValeurObjet.length !== 0) && (regexObjet.test(strValeurObjet))) {
-        refMessageErreurPostales.classList.add('cacher');
-    }
-    else {
-        refMessageErreurPostales.classList.remove('cacher');
+        refMessageErreur.classList.remove('cacher');
         blnEstValide = false;
     }
 
