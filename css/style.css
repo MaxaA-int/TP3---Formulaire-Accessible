@@ -33,6 +33,7 @@
     --couleur-primaire: #50C0F7;
     --couleur-secondaire: #2B769A;
     --couleur-tertiaire: #f7f5f0;
+    --couleur-quadra: #b9d7de;
     font-size: 16px;
 }
 
@@ -314,7 +315,7 @@ select {
     width: fit-content;
 }
 
-/* Autre (modificateurs) */
+/* Autre (modificateurs, effet survol, ) */
 .italic {
     font-style: italic;
 }
@@ -348,6 +349,14 @@ select {
 
 a {
     color: var(--couleur-primaire);
+}
+
+.bouton-commander button:hover,
+a:hover,
+input[type=radio]:hover + label {
+    outline: 3px solid var(--couleur-quadra);
+    outline-offset: 1px;
+    color: var(--couleur-quadra);
 }
 
 /* Affichage Écran large */

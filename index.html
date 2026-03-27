@@ -34,12 +34,12 @@
                                 <legend class="format__legende legende small-caps">Format de la brochure</legend>
                             </div>
 
-                            <div class="format__containeur containeur">
+                            <div class="format__containeur containeur ctnValidation">
 
                                 <ul class="format__liste table--flex--row">
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only" required>
+                                        <input name="format" id="imprime" type="radio" value="imprime" class="screen-reader-only" required title="Format Imprimé">
                                         <label for="imprime">
                                             <img src="images/icon-file-print.svg" alt="Format Imprimé">
                                             <p class="imprime__texte">Imprimé</p>
@@ -47,7 +47,7 @@
                                     </li>
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only" required>
+                                        <input name="format" id="pdf" type="radio" value="pdf" class="screen-reader-only" required title="Format PDF">
                                         <label for="pdf">
                                             <img src="images/icon-file-pdf.svg" alt="Format PDF">
                                             <p class="pdf__texte">PDF</p>
@@ -55,7 +55,7 @@
                                     </li>
 
                                     <li class="format__liste__item">
-                                        <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only" required>
+                                        <input name="format" id="epub" type="radio" value="epub" class="screen-reader-only" required title="Format EPUB">
                                         <label for="epub">
                                             <img src="images/icon-file-epub.svg" alt="Format ePub">
                                             <p class="epub__texte">ePub</p>
@@ -80,18 +80,18 @@
                                 <legend class="contact__legende legende">Informations de Contact</legend>
                             </div>
 
-                            <div class="contact__containeur containeur">
+                            <div class="contact__containeur containeur ctnValidation">
 
                                 <div class="nom-prenom__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="prenom">Prénom</label>
-                                        <input name="prenom" id="prenom" type="text" required pattern="[a-zA-Z0-9]+">
+                                        <input name="prenom" id="prenom" type="text" required pattern="[a-zA-Z0-9]+" title="Champ pour le prénom">
                                         <span class="message-erreur erreur-prenom cacher" role="alert">Veuillez écrire un prénom valide</span>
                                     </p>
                                     
                                     <p class="containeur__item">
                                         <label for="nom">Nom</label>
-                                        <input name="nom" id="nom" type="text" required pattern="[a-zA-Z0-9]+">
+                                        <input name="nom" id="nom" type="text" required pattern="[a-zA-Z0-9]+" title="Champ pour le nom">
                                         <span class="message-erreur erreur-nom cacher" role="alert">Veuillez écrire un nom valide</span>
                                     </p>
                                 </div>
@@ -100,7 +100,7 @@
                                     <label for="email">
                                         Courriel <span class="info__exemple">(exemple@domaine.com)</span>
                                     </label>
-                                    <input name="email" id="email" type="email" required>
+                                    <input name="email" id="email" type="email" required title="Champ pour l'adresse email">
                                     <span class="message-erreur erreur-email cacher" role="alert">Veuillez écrire un email valide</span>
                                 </p>
                                 
@@ -108,7 +108,7 @@
                                     <label for="telephone">
                                         Téléphone <span class="info__exemple">(exemple : 514 555 0123)</span>
                                     </label>
-                                    <input name="telephone" id="telephone" type="number" required>
+                                    <input name="telephone" id="telephone" type="number" required title="Champ pour le numéro de telephone">
                                     <span class="message-erreur erreur-tel cacher" role="alert">Veuillez écrire un numéro de téléphone valide</span>
                                 </p>
                             
@@ -127,20 +127,20 @@
                                 <legend class="postales__legende legende">Informations Postales</legend>
                             </div>
 
-                            <div class="postales__containeur containeur">
+                            <div class="postales__containeur containeur ctnValidation">
 
                                 <p class="containeur__item">
                                     <label for="adresse">
                                         Adresse <span class="info__exemple">(exemple : 123, rue Principale)</span>
                                     </label>
-                                    <input name="adresse" id="adresse" type="text" required pattern="\d+,\s[A-Za-zÀ-ÿ]+(\s[A-Za-zÀ-ÿ]+)*">
+                                    <input name="adresse" id="adresse" type="text" required pattern="\d+,\s[A-Za-zÀ-ÿ]+(\s[A-Za-zÀ-ÿ]+)*" title="Champ pour l'adresse">
                                     <span class="message-erreur erreur-adresse cacher" role="alert">Veuillez écrire une adresse valide</span>
                                 </p>
                                 
                                 <div class="localisation__containeur table--flex--row">
                                     <p class="containeur__item">
                                         <label for="pays">Pays</label>
-                                        <select name="pays" id="pays" required>
+                                        <select name="pays" id="pays" required title="Champ de sélection du Pays">
                                             <option value="canada" selected>Canada</option>
                                             <option value="usa">États-Unis</option>
                                             <option value="espagne">Espagne</option>
@@ -149,7 +149,7 @@
 
                                     <p class="containeur__item">
                                         <label for="province_etat">Province ou État</label>
-                                        <select name="province_etat" id="province_etat" required>
+                                        <select name="province_etat" id="province_etat" required title="Champ de sélection pour l'État ou la Province">
                                             <optgroup label="Canada">
                                                 <option value="QC">Québec</option>
                                                 <option value="ON" selected>Ontario</option>
@@ -168,7 +168,7 @@
                                     <label for="codePostal">
                                         Code Postal <span class="info__exemple">(exemple : A1A 1A1)</span>
                                     </label>
-                                    <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s\d[A-Za-z]\d">
+                                    <input name="codePostal" id="codePostal" type="text" max="7" required pattern="[A-Za-z]\d[A-Za-z]\s\d[A-Za-z]\d" title="Champ pour le code postal">
                                     <span class="message-erreur erreur-postal cacher" role="alert">Veuillez écrire un code postal valide</span>
                                 </p>
                             
@@ -179,7 +179,7 @@
                         <div class="footer__containeur containeur">
 
                             <p class="containeur__item infolettre">
-                                <input type="checkbox" name="infolettre" id="infolettre">
+                                <input type="checkbox" name="infolettre" id="infolettre" title="Case à coché falcultative pour recevoir des informations mensuelles">
                                 <label for="infolettre">
                                     Je désire recevoir des informations mensuelles par courriel
                                     sur les nouvelles publications et ressources disponibles. (facultatif)
@@ -190,7 +190,7 @@
                         </div>
 
                         <p class="bouton-commander">
-                            <button name="btnCommander" id="btnCommander" value="Commander">
+                            <button name="btnCommander" id="btnCommander" value="Commander" title="Bouton pour commander la brochure">
                                 <label for="btnCommander">Commander</label>
                                 <img src="images/icon-arrow.svg" alt="Commander">
                             </button>
